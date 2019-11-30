@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1575149533133,
+  "timestamp": 1575151043780,
   "index": "https://l4crito.github.io/cheques/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "https://l4crito.github.io/cheques/favicon.ico",
         "https://l4crito.github.io/cheques/index.html",
-        "https://l4crito.github.io/cheques/main-es2015.75f2908d842f1fe0820a.js",
-        "https://l4crito.github.io/cheques/main-es5.75f2908d842f1fe0820a.js",
+        "https://l4crito.github.io/cheques/main-es2015.893222cd7eb3e4da5cb7.js",
+        "https://l4crito.github.io/cheques/main-es5.893222cd7eb3e4da5cb7.js",
         "https://l4crito.github.io/cheques/manifest.webmanifest",
         "https://l4crito.github.io/cheques/polyfills-es2015.2987770fde9daa1d8a2e.js",
         "https://l4crito.github.io/cheques/polyfills-es5.ef4b1e1fc703b3ff76e3.js",
@@ -105,10 +105,10 @@
     "https://l4crito.github.io/cheques/assets/icons/icon-72x72.png": "04088d4c88a8e68117388a2175f0de4eb148b086",
     "https://l4crito.github.io/cheques/assets/icons/icon-96x96.png": "48d2b6d4e381fc97fa62d1d0724d8490c76de5d3",
     "https://l4crito.github.io/cheques/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://l4crito.github.io/cheques/index.html": "f465d87167707858d60aed3b0b04ca56d18c5a16",
-    "https://l4crito.github.io/cheques/main-es2015.75f2908d842f1fe0820a.js": "a3d564f3a743a80640c15f082e187a1cd8b29ec7",
-    "https://l4crito.github.io/cheques/main-es5.75f2908d842f1fe0820a.js": "fb7a106d57b54086101c8954443f983cd0929db8",
-    "https://l4crito.github.io/cheques/manifest.webmanifest": "160afa184368c8bd86018d9316e66113545f5aca",
+    "https://l4crito.github.io/cheques/index.html": "a2e6898056a48220d05797eda55858c0d071475f",
+    "https://l4crito.github.io/cheques/main-es2015.893222cd7eb3e4da5cb7.js": "6861cbd1dcb57a20fe87291c28c5ac4a7ec1c77d",
+    "https://l4crito.github.io/cheques/main-es5.893222cd7eb3e4da5cb7.js": "c77c81b73b52e3eff2a12b5617799c42801d4f17",
+    "https://l4crito.github.io/cheques/manifest.webmanifest": "efcc4fbe701de618a486b736416fb94db95c943b",
     "https://l4crito.github.io/cheques/polyfills-es2015.2987770fde9daa1d8a2e.js": "cf5cbfa9134716054fb479ab21362146cdf1f2ff",
     "https://l4crito.github.io/cheques/polyfills-es5.ef4b1e1fc703b3ff76e3.js": "9ceb13edd4b10268f661814868dadb2b284f9745",
     "https://l4crito.github.io/cheques/runtime-es2015.edb2fcf2778e7bf1d426.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",

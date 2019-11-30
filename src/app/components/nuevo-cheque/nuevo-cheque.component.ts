@@ -24,7 +24,7 @@ export class NuevoChequeComponent implements OnInit {
     const value = this.value ? this.value : 0;
     const rate = this.rate ? this.rate : 0;
     let days = this.getDifDays(new Date(), new Date(this.date));
-    days = days ? days : 1;
+    days = this.date ? days : 1;
     const dayEarning = round(((rate * value / 100)) / 30, 2);
     this.winValue = round(days * dayEarning, 2);
   }
