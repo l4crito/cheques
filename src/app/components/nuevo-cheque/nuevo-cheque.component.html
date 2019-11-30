@@ -1,0 +1,18 @@
+<div class="add" [ngClass]="{'short': checks&&checks.length>0}">
+    <div class="input">
+        <input class="check" type="number" [(ngModel)]="value" (ngModelChange)="calcWinRate()">
+        <label>Valor</label>
+    </div>
+    <div class="input">
+        <label>interes</label>
+        <input class="check" type="number" [(ngModel)]="rate" (ngModelChange)="calcWinRate()">
+    </div>
+    <div class="input">
+        <label>Fecha de cobro</label>
+        <input placeholder="Fecha " type="date" class="date" [(ngModel)]="date" (ngModelChange)="calcWinRate()">
+    </div>
+    <span class="win">{{winValue |currency}}</span>
+    <button [disabled]="disableButton()" mat-icon-button (click)="addCheck()">
+        <mat-icon>add_circle_outline</mat-icon>
+    </button>
+</div>

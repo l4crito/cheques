@@ -1,0 +1,23 @@
+<div class="check header">
+    <div class="date">FECHA</div>
+    <div class="money">MONTO</div>
+    <div class="money">INTERES</div>
+    <div class="money">GANANCIA</div>
+    <div class="delete">
+    </div>
+</div>
+<div *ngFor="let che of checks" class="check">
+    <div class="date">{{che.date|date}}</div>
+    <div class="money">{{che.value|currency}}</div>
+    <div class="money">{{che.rate}}%</div>
+    <div class="money">{{che.winValue|currency}}</div>
+    <div class="delete">
+        <button mat-icon-button (click)="removeCheck.emit(che)">
+            <mat-icon>delete_outline</mat-icon>
+        </button>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
