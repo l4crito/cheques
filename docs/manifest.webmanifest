@@ -1,8 +1,8 @@
 {
   "name": "cheques",
   "short_name": "cheques",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "theme_color": "rgba(128, 128, 128, 0.719)",
+  "background_color": "rgba(128, 128, 128, 0.719)",
   "display": "standalone",
   "scope": "/",
   "start_url": "https://l4crito.github.io/cheques/",

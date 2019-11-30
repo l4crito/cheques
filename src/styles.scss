@@ -89,6 +89,9 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 @media all and(max-width:800px) {
+  .none {
+    display: none;
+  }
   ::-webkit-scrollbar {
     width: 2px;
     background: rgba(211, 211, 211, 0.452);

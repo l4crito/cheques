@@ -58,8 +58,6 @@
     bottom: 0;
     left: 0;
     padding: 10px;
-    color: white;
-    font-size: 20px;
     border: none;
     border-top: solid 2px rgba(207, 44, 207, 0.89);
     border-top-right-radius: 0;
@@ -67,13 +65,14 @@
     width: 100%;
     align-items: center;
     justify-content: space-around;
+    min-width: auto;
     .item {
       margin: 0;
       label {
         font-size: 10px;
       }
       span {
-        font-size: 20px;
+        font-size: 15px;
         color: white;
       }
     }
