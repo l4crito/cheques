@@ -1,3 +1,4 @@
+
 .add {
   height: 100%;
   background-color: rgba(32, 32, 32);
@@ -6,8 +7,6 @@
   justify-content: space-around;
   flex-wrap: wrap;
   transition: height 0.8s ease;
-  position: sticky;
-  top: 0;
   .check {
     width: 200px;
   }

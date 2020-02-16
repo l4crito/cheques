@@ -9,7 +9,8 @@
     </div>
     <div class="input">
         <label>Fecha de cobro</label>
-        <input placeholder="Fecha " type="date" class="date" [(ngModel)]="date" (ngModelChange)="calcWinRate()">
+        <input placeholder="Fecha " type="date" class="date" [(ngModel)]="date" (ngModelChange)="calcWinRate()"
+            (keydown.enter)="addCheck()">
     </div>
     <span class="win">{{winValue |currency}}</span>
     <button [disabled]="disableButton()" mat-icon-button (click)="addCheck()">
