@@ -48,8 +48,13 @@
 }
 
 @media all and(max-width: 800px) {
+  .input {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
   .add {
     flex-direction: column;
+    flex-wrap: nowrap;
   }
   .short {
     height: 50%;
