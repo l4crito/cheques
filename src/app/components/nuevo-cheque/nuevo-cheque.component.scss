@@ -4,7 +4,7 @@ form {
   padding: 2rem;
   flex-direction: column;
   height: 100%;
-  background-color: rgb(29, 29, 29);
+  background-color: #202020;
   mat-form-field {
     width: 300px;
     input {
@@ -17,29 +17,37 @@ form {
   position: relative;
   .badge {
     position: absolute;
-    top: -.5rem;
-    right: -1.5rem;
+    bottom: -1rem;
     background-color: tomato;
     color: white;
-    line-height: 25px;
-    padding: 0 5px;
+    line-height: 23px;
+    padding: 0 10px;
     border-radius: 25px;
     font-size: 0.9rem;
     z-index: 40;
   }
 }
 
+.short {
+  height: 180px;
+  flex-direction: row;
+}
+
+
 @media all and(max-width:800px) {
   form {
+    flex-direction: row;
     flex-wrap: wrap;
     padding: 10px;
-    mat-form-field,.flex-center {
-      width: 40%;
+    height: 180px;
+    mat-form-field,
+    .flex-center {
+      width: 45%;
     }
+  }
+  .flex-center{
+    position: relative;
+    top: -6px;
   }
 }
 
-.short{
-  height: 200px;
-  flex-direction: row;
-}

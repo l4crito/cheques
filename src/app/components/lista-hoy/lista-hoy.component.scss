@@ -5,6 +5,8 @@
   justify-content: space-around;
   color: white;
   border-top: solid 1px rgba(241, 238, 238, 0.192);
+  font-size: 1.3rem;
+  letter-spacing: 4px;
   div {
     width: 100%;
     text-align: center;
@@ -39,7 +41,9 @@
 
 @media all and(max-width:800px) {
   .check {
-    font-size: 12px;
+    font-size: .8rem;
+    line-height: 1.3rem;
+    letter-spacing: 1px;
     .rate {
       order: -1;
     }
