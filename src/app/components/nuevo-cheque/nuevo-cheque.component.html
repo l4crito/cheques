@@ -1,19 +1,27 @@
-<div class="add" [ngClass]="{'short': checks&&checks.length>0}">
-    <div class="input">
-        <input class="check" type="number" [(ngModel)]="value" (ngModelChange)="calcWinRate()">
-        <label>Valor</label>
+<form [formGroup]="form" class="flex-around " (ngSubmit)="addCheck() " [ngClass]="{'short': checks.length}">
+    <mat-form-field appearance="outline">
+        <mat-label>Valor</mat-label>
+        <input matInput type="number" formControlName="value">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Interes</mat-label>
+        <input matInput type="number" formControlName="rate">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Fecha</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker touchUi #picker></mat-datepicker>
+    </mat-form-field>
+    <div class="flex-center">
+        <div class="save">
+            <div class="badge"> {{check.winValue|currency}} </div>
+            <button mat-fab color="primary" [disabled]="form.invalid">
+                <mat-icon>add</mat-icon>
+            </button>
+        </div>
     </div>
-    <div class="input">
-        <label>interes</label>
-        <input class="check" type="number" [(ngModel)]="rate" (ngModelChange)="calcWinRate()">
-    </div>
-    <div class="input">
-        <label>Fecha de cobro</label>
-        <input placeholder="Fecha " type="date" class="date" [(ngModel)]="date" (ngModelChange)="calcWinRate()"
-            (keydown.enter)="addCheck()">
-    </div>
-    <span class="win">{{winValue |currency}}</span>
-    <button [disabled]="disableButton()" mat-icon-button (click)="addCheck()">
-        <mat-icon>add_circle_outline</mat-icon>
-    </button>
-</div>
+
+
+</form>

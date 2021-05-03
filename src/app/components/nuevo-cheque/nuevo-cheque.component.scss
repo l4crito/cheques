@@ -1,56 +1,42 @@
-
-.add {
+form {
+  flex-direction: column;
   height: 100%;
-  background-color: rgba(32, 32, 32);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  transition: height 0.8s ease;
-  .check {
-    width: 200px;
-  }
-  .date {
-    width: 280px;
-    text-align: center;
-  }
-
-  .win {
-    text-align: center;
-    width: 200px;
-    min-width: 200px;
-    color: rgba(207, 44, 207, 0.89);
-    font-size: 25px;
-  }
-
-  button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    mat-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 35px;
-      color: rgba(207, 44, 207, 0.89);
-    }
-  }
-  button:disabled {
-    mat-icon {
-      color: gray;
+  mat-form-field {
+    width: 300px;
+    input {
+      text-align: center;
     }
   }
 }
 
-.short {
-  height: 150px;
+.save {
+  position: relative;
+  .badge {
+    position: absolute;
+    top: -.5rem;
+    right: -1.5rem;
+    background-color: tomato;
+    color: white;
+    line-height: 25px;
+    padding: 0 5px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    z-index: 40;
+  }
+}
+.short{
+  height: fit-content;
+  flex-direction: row;
 }
 
-@media all and(max-width: 800px) {
-  .add {
-    flex-direction: column;
-  }
-  .short {
-    height: 50%;
+@media all and(max-width:800px) {
+  form {
+    padding: 10px;
+    flex-direction: row;
+    height: fit-content;
+    flex-wrap: wrap;
+    mat-form-field,.flex-center {
+      width: 40%;
+    }
   }
 }

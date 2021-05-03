@@ -3,8 +3,8 @@
 @import "../node_modules/material-icons/iconfont/material-icons.css";
 
 @include mat-core();
-$dark-primary: mat-palette($mat-light-blue);
-$dark-accent: mat-palette($mat-purple, 500, 900, A100);
+$dark-primary: mat-palette($mat-purple);
+$dark-accent: mat-palette($mat-light-blue, 500, 900, A100);
 $dark-warn: mat-palette($mat-deep-orange);
 $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 @include angular-material-theme($dark-theme);
@@ -54,56 +54,33 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.input {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  label {
-    color: rgba(255, 255, 255, 0.842);
-    order: 1;
-    padding-left: 10px;
-    padding-bottom: 5px;
-    font-weight: 100;
-  }
-  input {
-    order: 2;
-    outline: none;
-    background: none;
-    border: none;
-    font-size: 35px;
-    font-weight: 700;
-    border-bottom: solid 2px rgba(128, 128, 128, 0.719);
-    color: white;
-  }
-  span {
-    order: 2;
-    font-size: 35px;
-    font-weight: 700;
-    color: white;
-  }
 
-  input:focus {
-    border-bottom: solid 2px rgba(207, 44, 207, 0.89);
-  }
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media all and(max-width:800px) {
-  .none {
-    display: none;
-  }
-  ::-webkit-scrollbar {
-    width: 2px;
-    background: rgba(211, 211, 211, 0.452);
-  }
-  .input {
-    label {
-      padding: 0;
-      font-size: 12px;
-    }
-    input {
-      font-size: 18px;
-      max-width: 125px;
-      text-align: center;
-    }
-  }
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex-evenly {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.none{
+  display: none;
 }

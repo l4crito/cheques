@@ -33,9 +33,17 @@
   line-height: 100px;
 }
 
+.rate {
+  min-width: 50px !important;
+  width: 50px !important;
+}
+
 @media all and(max-width:800px) {
   .check {
     font-size: 12px;
+    .rate {
+      order: -1;
+    }
   }
   .header {
     line-height: 50px;
