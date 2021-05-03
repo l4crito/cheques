@@ -1,6 +1,10 @@
 form {
+  transition: 400ms ease-in-out;
+  box-sizing: border-box;
+  padding: 2rem;
   flex-direction: column;
   height: 100%;
+  background-color: rgb(29, 29, 29);
   mat-form-field {
     width: 300px;
     input {
@@ -24,19 +28,18 @@ form {
     z-index: 40;
   }
 }
-.short{
-  height: fit-content;
-  flex-direction: row;
-}
 
 @media all and(max-width:800px) {
   form {
-    padding: 10px;
-    flex-direction: row;
-    height: fit-content;
     flex-wrap: wrap;
+    padding: 10px;
     mat-form-field,.flex-center {
       width: 40%;
     }
   }
+}
+
+.short{
+  height: 200px;
+  flex-direction: row;
 }
