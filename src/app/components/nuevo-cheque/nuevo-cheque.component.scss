@@ -29,7 +29,7 @@ form {
 }
 
 .short {
-  height: 180px;
+  height: fit-content;
   flex-direction: row;
 }
 
@@ -39,10 +39,13 @@ form {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 10px;
-    height: 180px;
+    height: fit-content;
     mat-form-field,
     .flex-center {
       width: 45%;
+    }
+    .person{
+      width: 95%;
     }
   }
   .flex-center{

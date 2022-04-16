@@ -80,9 +80,24 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   flex-wrap: wrap;
 }
+.show{
+  display: none;
+}
+.full{
+  width: 100%;
+}
+.divider{
+  border-bottom: solid 1px rgba(241, 238, 238, 0.192);
+}
+.full{
+  padding: 2px;
+}
 
 @media all and(max-width:800px) {
   .none {
     display: none;
+  }
+  .show{
+    display: block;
   }
 }

@@ -1,21 +1,25 @@
-<div class="check header">
+<!-- <div class="check header divider">
     <div class="date none">FECHA</div>
     <div class="money">MONTO</div>
     <div class="rate ">%</div>
     <div class="money">GANANCIA</div>
-    <div class="delete">
-    </div>
-</div>
-<div *ngFor="let che of checks" class="check">
-    <div class="date none">{{che.date|date}}</div>
+    <div class="delete">    </div>
+</div> -->
+<div *ngFor="let che of checks" class="flex-start full divider">
     <div class="money">{{che.value|currency}}</div>
-    <div class="rate ">{{che.rate}}%</div>
-    <div class="money">{{che.winValue|currency}}</div>
+    <div class="full">
+        <div class="person">{{che.person| uppercase}}</div>
+        <div class="check flex-start">
+            <div class="date">{{che.date|date:'shortDate'}}</div>
+            <div class="rate ">{{che.rate}}% | {{che.winValue|currency}}</div>
+        </div>
+    </div>
     <div class="delete">
         <button mat-icon-button (click)="removeCheck.emit(che)">
             <mat-icon>delete_outline</mat-icon>
         </button>
     </div>
+
 </div>
 <br>
 <br>

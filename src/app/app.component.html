@@ -1,22 +1,2 @@
-<div class="bg">
-    <app-nuevo-cheque [checks]="checks" (emitCheck)="addCheck($event)">
-    </app-nuevo-cheque>
-    <app-lista-hoy *ngIf="checks.length>0" (removeCheck)="removeCheck($event)" [checks]="checks"></app-lista-hoy>
-</div>
 
-<div class="totals" *ngIf="totalCheques>0">
-    <div class="item">
-        <label>Cheques</label>
-        <span>{{totalCheques|currency}}</span>
-    </div>
-    <label class="none">|</label>
-    <div class="item">
-        <label>Ganancia</label>
-        <span>{{ganancia|currency}}</span>
-    </div>
-    <label class="none">|</label>
-    <div class="item">
-        <label>Deposito</label>
-        <span>{{totalAdepositar|currency}}</span>
-    </div>
-</div>
+<router-outlet></router-outlet>

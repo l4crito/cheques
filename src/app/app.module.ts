@@ -16,6 +16,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule, } from '@angular/material/datepicker';
 import {MatBadgeModule} from '@angular/material/badge';
+import { HistorialComponent } from './components/historial/historial.component';
+import { PorCobrarComponent } from './components/por-cobrar/por-cobrar.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 registerLocaleData(localeEc, 'es-US');
@@ -24,7 +27,10 @@ registerLocaleData(localeEc, 'es-US');
   declarations: [
     AppComponent,
     NuevoChequeComponent,
-    ListaHoyComponent
+    ListaHoyComponent,
+    HistorialComponent,
+    PorCobrarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

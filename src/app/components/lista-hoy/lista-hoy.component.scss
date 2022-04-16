@@ -4,50 +4,75 @@
   align-items: center;
   justify-content: space-around;
   color: white;
-  border-top: solid 1px rgba(241, 238, 238, 0.192);
   font-size: 1.3rem;
   letter-spacing: 4px;
-  div {
-    width: 100%;
-    text-align: center;
-  }
-  .delete {
-    width: 50px;
-    min-width: 50px;
-    button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      mat-icon {
-        color: tomato;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-    }
-  }
+
 }
 
 .header {
-  border: none;
   font-weight: 800;
-  line-height: 100px;
+  line-height: 70px;
 }
 
 .rate {
-  min-width: 50px !important;
-  width: 50px !important;
+  color: rgba(0, 128, 0, 0.826);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.money{
+  text-align: center ;
+  min-width: 100px;
+  letter-spacing: 1px;
 }
 
+
+.delete {
+  width: 50px;
+  min-width: 50px;
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mat-icon {
+      color: tomato;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
 @media all and(max-width:800px) {
   .check {
     font-size: .8rem;
     line-height: 1.3rem;
     letter-spacing: 1px;
-    .rate {
-      order: -1;
+    justify-content: flex-start;
+    .date{
+      min-width: 70px !important;
+      width: 70px !important;
+      color:tomato;
+      font-weight: 300;
+      font-size: .6rem;
+      letter-spacing: 2px;
+      text-align: left !important;
+      padding-left: 10px;
     }
+
   }
+  .person{
+    font-weight: 300;
+    font-size: .6rem;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.704);
+    text-align: left !important;
+    padding-left: 10px;
+  }
+  .show{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
   .header {
     line-height: 50px;
   }
