@@ -1,1 +1,11 @@
-<p>por-cobrar works!</p>
+<div class="flex-start">
+    <h4>Cheques por cobrar</h4>
+    <button mat-icon-button routerLink="nuevo">
+        <mat-icon>add_circle_outline</mat-icon>
+    </button>
+    <button mat-icon-button routerLink="historial">
+        <mat-icon>history</mat-icon>
+    </button>
+</div>
+<app-lista-hoy *ngIf="checks.length>0" [checks]="checks" icon="check" (removeCheck)="removeCheck($event)">
+</app-lista-hoy>

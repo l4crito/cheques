@@ -1,1 +1,9 @@
-<p>historial works!</p>
+<div class="flex-start">
+    <button mat-icon-button routerLink="">
+        <mat-icon>arrow_back_ios</mat-icon>
+    </button>
+    <h4>Historial</h4>
+  
+</div>
+<app-lista-hoy *ngIf="checks.length>0" [checks]="checks" icon="check">
+</app-lista-hoy>

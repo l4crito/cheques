@@ -16,15 +16,16 @@ export class NuevoChequeComponent implements OnInit {
   check: CheckModel = { winValue: 0 };
   form: FormGroup;
   constructor(private formBuilder: FormBuilder) {
+   
+  }
+
+  ngOnInit() {
     this.initForm();
     this.clear();
     this.form.valueChanges.subscribe((val: CheckModel) => {
       this.check = val;
       this.calcWinRate();
     });
-  }
-
-  ngOnInit() {
   }
 
   calcWinRate() {
@@ -66,7 +67,7 @@ export class NuevoChequeComponent implements OnInit {
     this.form.controls.person.setValue('');
     this.form.controls.rate.setValue(4);
     this.form.controls.date.setValue(new Date());
-    // this.txtPerson?.nativeElement?.focus();
+    this.txtPerson.nativeElement.focus();
   }
 
 

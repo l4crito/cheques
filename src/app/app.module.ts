@@ -19,6 +19,7 @@ import {MatBadgeModule} from '@angular/material/badge';
 import { HistorialComponent } from './components/historial/historial.component';
 import { PorCobrarComponent } from './components/por-cobrar/por-cobrar.component';
 import { HomeComponent } from './components/home/home.component';
+import { ConfirmComponent } from './confirm/confirm.component';
 
 
 registerLocaleData(localeEc, 'es-US');
@@ -30,7 +31,8 @@ registerLocaleData(localeEc, 'es-US');
     ListaHoyComponent,
     HistorialComponent,
     PorCobrarComponent,
-    HomeComponent
+    HomeComponent,
+    ConfirmComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +50,7 @@ registerLocaleData(localeEc, 'es-US');
     MatNativeDateModule,
     MatBadgeModule
   ],
+  entryComponents:[ConfirmComponent],
   providers: [
     { provide: LOCALE_ID, useValue: 'es-US' },
   ],
