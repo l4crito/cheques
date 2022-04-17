@@ -67,7 +67,7 @@ export class NuevoChequeComponent implements OnInit {
     this.form.controls.person.setValue('');
     this.form.controls.rate.setValue(4);
     this.form.controls.date.setValue(new Date());
-    this.txtPerson.nativeElement.focus();
+    // this.txtPerson.nativeElement.focus();
   }
 
 

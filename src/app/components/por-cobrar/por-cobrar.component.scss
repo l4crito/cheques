@@ -1,5 +1,10 @@
-h4{
-    letter-spacing: 2px;
-    padding-left: 10px;
-    font-weight: 800;
+.flex-start{
+    padding: 1rem;
+    letter-spacing: 5px;
+    button{
+        margin-left: 1rem;
+    }
+    .history{
+        justify-self: flex-end;
+    }
 }
