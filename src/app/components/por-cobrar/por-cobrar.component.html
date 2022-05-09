@@ -12,5 +12,7 @@
 <div class="flex-start">
     <h4>Proximos</h4>
 </div>
-<app-lista-hoy *ngIf="checks.length>0" [checks]="checks" icon="check" (removeCheck)="removeCheck($event)">
+<app-lista-hoy *ngIf="checks.length>0" [checks]="checks" icon="check" (removeCheck)="removeCheck($event)" hideEvent="true">
 </app-lista-hoy>
+
+<div class="total" *ngIf="total">Total: {{total|currency}}</div>

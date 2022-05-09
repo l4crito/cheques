@@ -20,6 +20,7 @@ import { HistorialComponent } from './components/historial/historial.component';
 import { PorCobrarComponent } from './components/por-cobrar/por-cobrar.component';
 import { HomeComponent } from './components/home/home.component';
 import { ConfirmComponent } from './confirm/confirm.component';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 
 registerLocaleData(localeEc, 'es-US');
@@ -48,7 +49,8 @@ registerLocaleData(localeEc, 'es-US');
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     MatDatepickerModule,
     MatNativeDateModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatAutocompleteModule
   ],
   entryComponents:[ConfirmComponent],
   providers: [

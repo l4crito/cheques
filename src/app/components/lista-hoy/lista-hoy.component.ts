@@ -8,8 +8,10 @@ import { CheckModel } from '../../models/check.model';
 })
 export class ListaHoyComponent implements OnInit {
   @Input() checks: CheckModel[];
-  @Input() icon='delete_outline';
+  @Input() icon = 'delete_outline';
+  @Input() hideEvent = false;
   @Output() removeCheck: EventEmitter<CheckModel> = new EventEmitter<CheckModel>();
+
   constructor() { }
 
   ngOnInit() {

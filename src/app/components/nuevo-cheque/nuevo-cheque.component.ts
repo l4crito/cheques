@@ -3,6 +3,9 @@ import { CheckModel, CheckStatus } from '../../models/check.model';
 import { round } from '../../utils/functions';
 import { v1 as uuid } from 'uuid';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Observable } from 'rxjs';
+import {map, startWith} from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-nuevo-cheque',
@@ -13,8 +16,10 @@ export class NuevoChequeComponent implements OnInit {
   @Output() emitCheck: EventEmitter<CheckModel> = new EventEmitter<CheckModel>();
   @ViewChild('txtPerson',{static:true}) txtPerson: ElementRef;
   @Input() checks: CheckModel[];
+  filteredOptions: Observable<string[]>;
   check: CheckModel = { winValue: 0 };
   form: FormGroup;
+  persons:string[]=[];
   constructor(private formBuilder: FormBuilder) {
    
   }
@@ -26,6 +31,37 @@ export class NuevoChequeComponent implements OnInit {
       this.check = val;
       this.calcWinRate();
     });
+    this.getClients();
+    this.filteredOptions = this.form.controls.person.valueChanges
+    .pipe(
+      startWith(''),
+      map(value => this._filter(value))
+    );
+  }
+
+
+  private _filter(value: string): string[] {
+    if(value.length<3){
+      return [];
+    }
+    const filterValue = value.toUpperCase();
+    return this.persons.filter(option => option.includes(filterValue));
+  }
+
+   async getClients(){
+    const pendings = localStorage.getItem(CheckStatus.PENDING)
+    if (pendings) {
+      const stored: CheckModel[] = JSON.parse(pendings);
+      const clients:string[]=stored.map(check=>check.person);
+      this.persons.push(...clients);
+    }
+    const payed = localStorage.getItem(CheckStatus.PAYED)
+    if (payed) {
+      const stored: CheckModel[] = JSON.parse(payed);
+      const clients:string[]=stored.map(check=>check.person);
+      this.persons.push(...clients);
+    }
+    this.persons=[...new Set(this.persons)];
   }
 
   calcWinRate() {

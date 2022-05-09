@@ -11,6 +11,7 @@ import { CheckModel, CheckStatus } from 'src/app/models/check.model';
 export class PorCobrarComponent implements OnInit {
   checks: CheckModel[] = []
   pendings: CheckModel[] = []
+  total=0;
 
   constructor(public dialog: MatDialog) { }
 
@@ -22,6 +23,7 @@ export class PorCobrarComponent implements OnInit {
       const stored: CheckModel[] = JSON.parse(checks);
       this.pendings = stored.filter(c => (new Date (c.date)).getTime() <= today.getTime());
       this.checks=stored.filter(c=>!this.pendings.find(p=>c.id==p.id))
+      this.total=stored.map(c=> c.value).reduce((a,b)=>a+b,0)
     }
   }
 
