@@ -7,5 +7,10 @@
         <mat-icon>history</mat-icon>
     </button>
 </div>
+<app-lista-hoy *ngIf="pendings.length>0" [checks]="pendings" icon="check" (removeCheck)="removeCheck($event)">
+</app-lista-hoy>
+<div class="flex-start">
+    <h4>Proximos</h4>
+</div>
 <app-lista-hoy *ngIf="checks.length>0" [checks]="checks" icon="check" (removeCheck)="removeCheck($event)">
 </app-lista-hoy>

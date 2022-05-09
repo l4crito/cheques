@@ -23,6 +23,18 @@
   text-align: center ;
   min-width: 100px;
   letter-spacing: 1px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  .win-value{
+    font-size: .6rem;
+    position: absolute;
+    bottom: -12px;
+    background-color: rgba(241, 238, 238, 0.192);
+    border-top-right-radius: 5px;
+    padding: 1px 4px;
+    color: tomato;
+  }
 }
 
 
