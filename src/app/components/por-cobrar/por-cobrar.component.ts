@@ -36,6 +36,7 @@ export class PorCobrarComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
         this.checks = this.checks.filter(check => check.id !== ck.id);
+        this.pendings = this.pendings.filter(check => check.id !== ck.id);
         ck.status = CheckStatus.PAYED;
         ck.datePayed = new Date();
         localStorage.setItem(CheckStatus.PENDING, JSON.stringify(this.checks));
