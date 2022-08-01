@@ -7,6 +7,7 @@ export interface CheckModel {
     person?: string;
     id?: any;
     status?: CheckStatus;
+    selected?: boolean;
 }
 
 export enum CheckStatus{

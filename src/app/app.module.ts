@@ -21,6 +21,7 @@ import { PorCobrarComponent } from './components/por-cobrar/por-cobrar.component
 import { HomeComponent } from './components/home/home.component';
 import { ConfirmComponent } from './confirm/confirm.component';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { TotalComponent } from './components/total/total.component';
 
 
 registerLocaleData(localeEc, 'es-US');
@@ -33,7 +34,8 @@ registerLocaleData(localeEc, 'es-US');
     HistorialComponent,
     PorCobrarComponent,
     HomeComponent,
-    ConfirmComponent
+    ConfirmComponent,
+    TotalComponent
   ],
   imports: [
     BrowserModule,

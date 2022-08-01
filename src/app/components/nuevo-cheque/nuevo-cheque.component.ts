@@ -86,6 +86,8 @@ export class NuevoChequeComponent implements OnInit {
     this.check.status=CheckStatus.PENDING;
     this.emitCheck.emit(this.check);
     this.clear();
+    this.persons.push(this.check.person);
+    this.persons=[...new Set(this.persons)];
   }
 
   initForm() {

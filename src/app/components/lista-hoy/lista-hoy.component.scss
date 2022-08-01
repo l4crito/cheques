@@ -53,6 +53,22 @@
     }
   }
 }
+.container{
+  box-sizing: border-box;
+  transition: 400ms ease-in-out;
+  border: solid 1px transparent;
+  transform: scale(1);
+  cursor: pointer;
+  margin: .5rem 0;
+}
+
+.selected{
+  border-left: solid 1px tomato;
+  color: tomato !important;
+  &:last-child{
+    border-bottom: solid 1px transparent;
+  }
+}
 @media all and(max-width:800px) {
   .check {
     font-size: .8rem;

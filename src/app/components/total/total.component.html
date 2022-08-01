@@ -1,0 +1,16 @@
+<div class="totals flex" *ngIf="totalCheques>0">
+    <div class="item">
+        <label>Cheques</label>
+        <span>{{totalCheques|currency}}</span>
+    </div>
+    <label class="none">|</label>
+    <div class="item">
+        <label>Ganancia</label>
+        <span>{{ganancia|currency}}</span>
+    </div>
+    <label class="none">|</label>
+    <div class="item">
+        <label>Deposito</label>
+        <span>{{totalAdepositar|currency}}</span>
+    </div>
+</div>

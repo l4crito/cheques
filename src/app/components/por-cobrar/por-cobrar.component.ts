@@ -11,7 +11,11 @@ import { CheckModel, CheckStatus } from 'src/app/models/check.model';
 export class PorCobrarComponent implements OnInit {
   checks: CheckModel[] = []
   pendings: CheckModel[] = []
-  total=0;
+  selectedChecks: CheckModel[] = [];
+  total = 0;
+  totalCheques = 0;
+  ganancia = 0;
+  totalAdepositar = 0;
 
   constructor(public dialog: MatDialog) { }
 
@@ -21,11 +25,27 @@ export class PorCobrarComponent implements OnInit {
     today.setHours(23, 59, 59)
     if (checks) {
       const stored: CheckModel[] = JSON.parse(checks);
-      this.pendings = stored.filter(c => (new Date (c.date)).getTime() <= today.getTime());
-      this.checks=stored.filter(c=>!this.pendings.find(p=>c.id==p.id))
-      this.total=stored.map(c=> c.value).reduce((a,b)=>a+b,0)
+      stored.forEach(c => c.selected = false);
+      this.pendings = stored.filter(c => (new Date(c.date)).getTime() <= today.getTime());
+      this.checks = stored.filter(c => !this.pendings.find(p => c.id == p.id))
+      this.total = stored.map(c => c.value).reduce((a, b) => a + b, 0)
     }
   }
+
+  getSelectedTotal(check: CheckModel) {
+    check.selected = !check.selected;
+    this.totalCheques = 0;
+    this.totalAdepositar = 0;
+    this.ganancia = 0;
+    this.selectedChecks = this.checks.filter(c => c.selected).concat(this.pendings.filter(c => c.selected));
+    this.selectedChecks.forEach(c => {
+      this.totalCheques += c.value
+      this.ganancia += c.winValue
+    })
+
+    this.totalAdepositar = this.totalCheques - this.ganancia
+  }
+
 
   removeCheck(ck: CheckModel) {
     const dialogRef = this.dialog.open(ConfirmComponent, {
@@ -47,7 +67,6 @@ export class PorCobrarComponent implements OnInit {
           localStorage.setItem(CheckStatus.PAYED, JSON.stringify(historyToSave));
         } else {
           localStorage.setItem(CheckStatus.PAYED, JSON.stringify([ck]));
-
         }
       }
     });

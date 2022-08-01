@@ -1,4 +1,4 @@
-<div *ngFor="let che of checks" class="flex-start full divider">
+<div *ngFor="let che of checks" class="flex-start full divider container" (click)="selectCheck.emit(che)" [ngClass]="{'selected': che.selected}">
     <div class="money">{{che.value|currency}}
         <div class="win-value">{{che.winValue|currency}}</div>
     </div>
@@ -10,13 +10,12 @@
         </div>
     </div>
     <div class="delete" *ngIf="che.status==='pending'&&!hideEvent">
-        <button mat-icon-button (click)="removeCheck.emit(che)">
+        <button mat-icon-button (click)="remove($event,che)">
             <mat-icon>{{icon}}</mat-icon>
         </button>
     </div>
     <div  *ngIf="che.status==='payed'">
         <div class="payedDate">{{che.date|date:'shortDate'}}</div>
     </div>
-
 </div>
 <br>

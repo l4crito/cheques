@@ -11,10 +11,16 @@ export class ListaHoyComponent implements OnInit {
   @Input() icon = 'delete_outline';
   @Input() hideEvent = false;
   @Output() removeCheck: EventEmitter<CheckModel> = new EventEmitter<CheckModel>();
+  @Output() selectCheck: EventEmitter<CheckModel> = new EventEmitter<CheckModel>();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  remove(evt: any, check: CheckModel) {
+    evt.stopImmediatePropagation();
+    this.removeCheck.emit(check);
   }
 
 
