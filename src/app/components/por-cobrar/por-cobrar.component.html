@@ -14,14 +14,15 @@
     <h4>Proximos</h4>
 </div>
 <app-lista-hoy *ngIf="checks.length>0" [checks]="checks" icon="check" (removeCheck)="removeCheck($event)"
+    (selectCheck)="getSelectedTotal($event)"
     hideEvent="true">
 </app-lista-hoy>
 
 <div class="total" *ngIf="total&&!totalAdepositar">Total: {{total|currency}}</div>
 
-<div class="selectedChecks" *ngIf="selectedChecks.length>0" >
+<div class="selectedChecks" *ngIf="selectedChecks.length>0" @bottomToTopAnimation>
     <div class="flex-start"><h4>Cheques Seleccionados</h4></div>
-    <app-lista-hoy  [checks]="selectedChecks" icon="check">
+    <app-lista-hoy  [checks]="selectedChecks"  hideEvent="true">
     </app-lista-hoy>
     <app-total [totalCheques]="totalCheques" [ganancia]="ganancia"
         [totalAdepositar]="totalAdepositar"></app-total>

@@ -1,4 +1,4 @@
-<div *ngFor="let che of checks" class="flex-start full divider container" (click)="selectCheck.emit(che)" [ngClass]="{'selected': che.selected}">
+<div *ngFor="let che of checks" class="flex-start full divider container ns" (click)="selectCheck.emit(che)" [ngClass]="{'selected': che.selected}" >
     <div class="money">{{che.value|currency}}
         <div class="win-value">{{che.winValue|currency}}</div>
     </div>

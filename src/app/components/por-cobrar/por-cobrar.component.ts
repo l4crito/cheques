@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { ConfirmComponent } from 'src/app/confirm/confirm.component';
 import { CheckModel, CheckStatus } from 'src/app/models/check.model';
+import { apearAnimation, bottomToTopAnimation, rightToLeft } from 'src/app/utils/animations';
 
 @Component({
   selector: 'app-por-cobrar',
   templateUrl: './por-cobrar.component.html',
-  styleUrls: ['./por-cobrar.component.scss']
+  styleUrls: ['./por-cobrar.component.scss'],
+  animations:[bottomToTopAnimation]
 })
 export class PorCobrarComponent implements OnInit {
   checks: CheckModel[] = []
